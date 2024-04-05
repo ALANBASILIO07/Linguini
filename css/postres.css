@@ -1,0 +1,146 @@
+.barra-negra {
+    background-color: black;
+    color: white;
+    padding: 20px; /* Ajusta el espacio entre el contenido y los bordes de la barra */
+    position: fixed; /* Fija la barra en la parte superior de la ventana del navegador */
+    top: 0; /* Coloca la barra en la parte superior */
+    left: 0; /* Coloca la barra en la parte izquierda */
+    width: 1440px; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 25px;/*Ajuste de la altura de la barra*/
+}
+
+/* Estilos para las imágenes dentro de la barra */
+.barra-negra img {
+    max-width: 35px; /* Ancho máximo de las imágenes */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    margin-right: 20px; /* Espacio entre las imágenes y el límite de la barra */
+}
+/* Estilos para los iconos en el lado derecho */
+.iconos-derecha {
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para los cuadrados de imagen */
+.cuadrados-imagenes {
+    text-align: center; /* Para centrar los cuadrados horizontalmente */
+    margin-top: 20px; /* Margen superior para separar los cuadrados del contenido superior */
+}
+
+/* Estilos para los cuadrados de imagen */
+.cuadrado-imagen {
+    width: 80px; /* Ancho del cuadrado */
+    height: 80px; /* Altura del cuadrado */
+    margin-right: 100px; /* Aumenta el margen derecho para aumentar la separación entre los cuadrados */
+    margin-bottom: 20px; /* Margen inferior para separar los cuadrados verticalmente */
+    background-color: white; /* Color de fondo del cuadrado */
+    border: 1px solid black; /* Borde del cuadrado */
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
+    margin-top:auto;
+}
+
+section{
+    margin: 10px;
+}
+
+.texto-amarillo {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Margen superior para separar el texto del rectángulo amarillo */
+    color: black; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente del texto */
+}
+
+.rectangulo-amarillo {
+    background-color: #DAAE64;
+    width:1440px; /* Ancho del rectángulo amarillo */
+    height: 200px; /* Altura del rectángulo amarillo */
+    margin: 0 auto; /* Centra el rectángulo horizontalmente */
+    border-radius: 20px; /* Hace que las esquinas sean redondeadas */
+}
+
+/*FOOTER*/
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 1440px;
+    padding: 30px 30px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* EFECTO HOVER EN REDES SOCIALES */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
