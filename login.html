@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF - 8">
+        <meta name="vista" content="wight = devic-weight, initial-escale = 1.0">
+        <title> Iniciar Sesion</title>
+        <style>
+            body
+            {
+                font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold';
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.545);
+            }
+            form
+            {
+                background-color: rgb(225, 225, 225);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px,0px,10px,rgba(0, 0, 0, 0.1);
+            }
+
+            input[type = "text"], input[type = "password"]
+            {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #f5f5f5f6;
+                border-radius: 3px;
+                box-sizing: border-box;
+            }
+
+            input[type = "submit"]
+            {
+                width: 100%;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0);
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.03s ease;
+            }
+
+            input[typr = "submit"]:hover
+            {
+                background-color: rgb(246, 149, 4);
+            }
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <h2>Inicie Sesion</h2>
+            <input type="text" name = "usuario" placeholder="USUARIO" required>
+            <input type="text" name="contraseña" placeholder="CONTRASENIA" required>
+            <input type="submit" value="Iniciar">
+        </form>
+    </body>
 </html>
