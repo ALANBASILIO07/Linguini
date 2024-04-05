@@ -1,11 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" /> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura la vista en dispositivos móviles -->
+    <link rel="stylesheet" href="css/styles.css" /> <!-- Enlaza la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Enlaza la hoja de estilos de Font Awesome para iconos -->
+    <title>Desayunos - A la Linguini</title> <!-- Título de la página -->
+    <style>
+        /* Estilos CSS para el tamaño del logo */
+        .logo img {
+            width: 100px; /* Define el ancho del logo */
+            height: auto; /* Mantiene la proporción de altura */
+        }
+    </style>
+
+    <style>
+        /* Aquí se definen los estilos CSS para los elementos HTML */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            margin-top: 60px; /* Ajuste para la barra de navegación */
+            padding-bottom: 60px; /* Ajuste para el pie de página */
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        /* Resto de tus estilos CSS... */
+
+        /* Estilos para el Frame 9 */
+        .frame-9 {
+            width: calc(100% - 40px); /* Ancho del frame */
+            max-width: 800px; /* Ancho máximo del frame */
+            margin: 20px auto; /* Centrar el frame */
+            background: #E2CAA7; /* Color de fondo */
+            border-radius: 30px; /* Radio de borde para crear esquinas redondeadas */
+            padding: 20px; /* Espaciado interno */
+        }
+
+        /* Estilos para el Frame 13 */
+        .frame-13 {
+            width: calc(100% - 40px); /* Ancho del frame */
+            max-width: 800px; /* Ancho máximo del frame */
+            margin: 20px auto; /* Centrar el frame */
+            background: #D6D6D6; /* Color de fondo */
+            border-radius: 10px; /* Radio de borde */
+            padding: 20px; /* Espaciado interno */
+        }
+
+        /* Estilos para la sección de las recetas en la parte superior */
+        .top-recetas {
+            width: calc(100% - 40px); /* Ancho de la sección */
+            max-width: 800px; /* Ancho máximo de la sección */
+            margin: 20px auto; /* Centrar la sección */
+            background: #FFF; /* Color de fondo */
+            border-radius: 10px; /* Radio de borde */
+            padding: 20px; /* Espaciado interno */
+        }
+
+        /* Estilos para el título "AllRecetas" */
+        .titulo-all-recetas {
+            width: calc(100% - 40px); /* Ancho del título */
+            max-width: 800px; /* Ancho máximo del título */
+            margin: 20px auto; /* Centrar el título */
+            color: #333; /* Color del texto */
+            text-align: center; /* Alineación del texto */
+            font-size: 24px; /* Tamaño de la fuente */
+        }
+
+        /* Estilos para el cuerpo de la página */
+        .body {
+            width: calc(100% - 40px); /* Ancho del cuerpo */
+            max-width: 800px; /* Ancho máximo del cuerpo */
+            margin: 20px auto; /* Centrar el cuerpo */
+            background: #DAAE64; /* Color de fondo */
+            border-radius: 20px; /* Radio de borde */
+            padding: 20px; /* Espaciado interno */
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4); /* Sombra */
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="header"> <!-- Cabecera de la página -->
+        <!-- LOGO DE LA PÁGINA -->
+        <a href="index.html" class="logo">
+            <img src="Pictures/Logo A la Linguini - Dark.png" alt="Logo de la página">
+        </a>
+        <nav class="navbar"> <!-- Barra de navegación -->
+            <!-- LABEL CON LOGO, ICONO DE MENÚ Y BUSQUEDA -->
+            <label class="labe_busqueda" for="busqueda"> <!-- Etiqueta para el icono de búsqueda -->
+                
+                <!-- Icono de menú hamburguesa -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="list_icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <!-- Icono de búsqueda -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </label>
+            <input class="busqueda" type="checkbox" name="" id="busqueda"> <!-- Campo de entrada para la búsqueda -->
+
+            <!-- MENU HAMBURGUESA -->
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa"> <!-- Campo de entrada para el menú hamburguesa -->
+
+            <!-- Lista de enlaces de navegación -->
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="#" class="link">Inicio</a>
+                </li>
+                <li class="li_links">
+                    <a href="login.html" class="link">Iniciar Sesión</a>
+                </li>
+                <li class="li_links">
+                    <a href="favorites.html" class="link">Mis favoritos</a>
+                </li>
+                <li class="li_links">
+                    <a href="setup.html" class="link">Configuración</a>
+                </li>
+                <li class="li_links">
+                    <a href="about us.html" class="link">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Cuerpo de la página -->
+    <div class="body">
+        <!-- Mis Recetas -->
+<div style="
+position: absolute;
+width: 1364px;
+height: 109px;
+left: calc(50% - 1364px/2);
+top: calc(50% - 109px/2 - 303px);
+font-family: 'Miama';
+font-style: italic;
+font-weight: 400;
+font-size: 64px;
+line-height: 200px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+">
+Mis Recetas
+</div>
+
+<!-- Receta 1 -->
+<div style="
+position: absolute;
+width: 1261px;
+height: 200px;
+left: 111px;
+top: 328px;
+background: #DAAE64;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+border-radius: 35px;
+">
+<!-- Contenido de la receta 1 -->
+</div>
+
+<!-- Receta 2 -->
+<div style="
+position: absolute;
+width: 1261px;
+height: 200px;
+left: 111px;
+top: 546px;
+background: #DAAE64;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+border-radius: 35px;
+">
+<!-- Contenido de la receta 2 -->
+</div>
+
+<!-- Receta 3 -->
+<div style="
+position: absolute;
+width: 1261px;
+height: 200px;
+left: 111px;
+top: 764px;
+background: #DAAE64;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+border-radius: 35px;
+">
+<!-- Contenido de la receta 3 -->
+</div>
+
+    </div>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <!-- Contenedor del pie de página -->
+        <div class="footerContainer">
+            <!-- Iconos de redes sociales -->
+            <div class="socialIcons">
+                <!-- Cada enlace contiene un icono de red social -->
+            </div>
+            <!-- Enlaces de navegación del pie de página -->
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Acerca de</a></li>
+                    <li><a href="">Nuestro Equipo</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Información de derechos de autor -->
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Diseñado por <span class="designer">A la Linguini</span></p>
+        </div>
+    </footer>
 </body>
 </html>
