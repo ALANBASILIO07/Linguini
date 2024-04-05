@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snacks</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <!--BÚSQUEDA-->
+            <label class="labe_busqueda" for="busqueda">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="25" 
+                    height="25" 
+                    fill="currentColor" 
+                    class="bi-search" 
+                    viewBox="0 0 16 16"
+                >
+                    <path 
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                </svg>
+            </label>
+
+            <input class="busqueda" type="checkbox" name="" id="busqueda">
+
+            <!--MENU HAMBURGUESA-->
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    fill="currentColor"
+                    class="list_icon"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="#" class="link">Inicio</a>
+                </li>
+                <li class="li_links">
+                    <a href="login.html" class="link">Iniciar Sesión</a>
+                </li>
+                <li class="li_links">
+                    <a href="favorites.html" class="link">Mis favoritos</a>
+                </li>
+                <li class="li_links">
+                    <a href="setup.html" class="link">Configuración</a>
+                </li>
+                <li class="li_links">
+                    <a href="about us.html" class="link">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>SNACKS</h1>
+        <div class="rectangulo-naranja"></div> <!-- Rectángulo naranja -->
+        
+        <div class="texto-bajo-rectangulo">TOP 10 RECETAS</div> <!-- Texto abajo del rectángulo naranja -->
+        
+        <div class="rectangulo-gris"></div> <!-- Rectángulo gris en el lado derecho -->
+        
+        <!-- Cuadrados para imágenes -->
+        <div class="cuadrados-imagenes">
+            <div class="cuadrado-imagen"><img src="Comida1.png" alt="Imagen 1"></div>
+            <div class="cuadrado-imagen"><img src="Comida2.png" alt="Imagen 2"></div>
+            <div class="cuadrado-imagen"><img src="comida3.png" alt="Imagen 3"></div>
+            <div class="cuadrado-imagen"><img src="comida 4.png" alt="Imagen 4"></div>
+            <div class="cuadrado-imagen"><img src="comida5.png" alt="Imagen 5"></div>
+            <div class="cuadrado-imagen"><img src="comida6.png" alt="Imagen 6"></div>
+            <div class="cuadrado-imagen"><img src="comida7.png" alt="Imagen 7"></div>
+            <div class="cuadrado-imagen"><img src="comida8.png" alt="Imagen 8"></div>
+            <div class="cuadrado-imagen"><img src="comida9.png" alt="Imagen 9"></div>
+            <div class="cuadrado-imagen"><img src="comida10.png" alt="Imagen 10"></div>
+        </div>
+        <div class="texto-amarillo">Todas las recetas</div> Texto arriba del rectángulo amarillo
+        
+        <div class="rectangulo-amarillo"></div> <!-- Rectángulo amarillo -->
+    </section>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="">Inicio</a></li>
+                    <li><a href="">Acerca de</a></li>
+                    <li><a href="">Nuestro Equipo</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Diseñado por <span class="designer">A la Linguini</span></p>
+        </div>
+    </footer>
 </body>
 </html>

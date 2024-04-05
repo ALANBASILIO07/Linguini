@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plato Fuerte</title>
+    <link rel="stylesheet" href="css/pfuerte.css">
+    <style>
+        /* Estilos para los cuadrados de imagen */
+        .cuadrado-imagen {
+            display: inline-block; /* Para que los cuadrados estén en línea */
+            width: 80px; /* Ancho del cuadrado */
+            height: 80px; /* Altura del cuadrado */
+            margin-right: 10px; /* Margen derecho entre los cuadrados */
+            background-color: white; /* Color de fondo del cuadrado */
+            border: 1px solid black; /* Borde del cuadrado */
+        }
+
+        /* Estilos para las imágenes dentro de los cuadrados */
+        .cuadrado-imagen img {
+            width: 100%; /* Ajustar la imagen al 100% del ancho del cuadrado */
+            height: 100%; /* Ajustar la imagen al 100% de la altura del cuadrado */
+            object-fit: cover; /* Para cubrir todo el contenido del cuadrado */
+        }
+    </style>
 </head>
 <body>
-    
+
+<div class="barra-negra">
+    <img src="Pictures/Logo A la Linguini - Dark.png" alt="Logo">
+    <div class="iconos-derecha">
+        <img src="Pictures/Buscar.png" alt="Buscar">
+        <div class="separador"></div> <!-- Div para separación visual -->
+        <img src="Pictures/Menu.png" alt="Menú">
+    </div>
+    <!-- Puedes agregar más imágenes aquí según sea necesario -->
+</div>
+
+<div class="rectangulo-naranja"></div> <!-- Rectángulo naranja -->
+
+<div class="texto-bajo-rectangulo">TOP 10 RECETAS</div> <!-- Texto abajo del rectángulo naranja -->
+
+<div class="rectangulo-gris"></div> <!-- Rectángulo gris en el lado derecho -->
+
+<!-- Cuadrados para imágenes -->
+<div class="cuadrados-imagenes">
+    <div class="cuadrado-imagen"><img src="Pictures/Comida1.png" alt="Imagen 1"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/Comida2.png" alt="Imagen 2"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida3.png" alt="Imagen 3"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida 4.png" alt="Imagen 4"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida5.png"Imagen 5"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida6.png" alt="Imagen 6"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida7.png" alt="Imagen 7"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida8.png" alt="Imagen 8"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida9.png" alt="Imagen 9"></div>
+    <div class="cuadrado-imagen"><img src="Pictures/comida10.png" alt="Imagen 10"></div>
+</div>
+<div class="texto-amarillo">Todas las recetas</div> <!-- Texto arriba del rectángulo amarillo -->
+
+<div class="rectangulo-amarillo"></div> <!-- Rectángulo amarillo -->
 </body>
 </html>
+

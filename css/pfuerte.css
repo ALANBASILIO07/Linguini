@@ -1,0 +1,106 @@
+/* Estilos para la barra negra */
+.barra-negra {
+    background-color: black;
+    color: white;
+    padding: 20px; /* Ajusta el espacio entre el contenido y los bordes de la barra */
+    position: fixed; /* Fija la barra en la parte superior de la ventana del navegador */
+    top: 0; /* Coloca la barra en la parte superior */
+    left: 0; /* Coloca la barra en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para las imágenes dentro de la barra */
+.barra-negra img {
+    max-width: 35px; /* Ancho máximo de las imágenes */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    margin-right: 20px; /* Espacio entre las imágenes y el límite de la barra */
+}
+
+/* Estilos para los iconos en el lado derecho */
+.iconos-derecha {
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para el separador */
+.separador {
+    margin-left: 20px; /* Margen izquierdo del separador */
+}
+
+/* Estilos para el rectángulo naranja */
+.rectangulo-naranja {
+    background-color: #E2CAA7;
+    position: fixed; /* Fija el rectángulo en la parte superior de la ventana */
+    top: 100px; /* Separación de 20px desde la parte superior */
+    left: 20px; /* Separación de 20px desde el lado izquierdo */
+    width: calc(100% - 900px); /* Ancho igual al 100% menos 160px de la separación (20px a la izquierda, 20px a la derecha y 140px de margen derecho) */
+    height: 300px; /* Altura del rectángulo */
+    z-index: 999; /* Asegura que el rectángulo esté detrás de la barra negra */
+    border-radius: 20px; /* Hace que las esquinas sean redondeadas */
+}
+
+/* Estilos para el texto debajo del rectángulo naranja */
+.texto-bajo-rectangulo {
+    position: fixed; /* Fija el texto en la parte superior de la ventana */
+    top: 420px; /* Ajusta la posición vertical del texto según sea necesario */
+    left: 40px; /* Ajusta la posición horizontal del texto según sea necesario */
+    color: black; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente del texto */
+}
+
+/* Estilos para el rectángulo gris */
+.rectangulo-gris {
+    background-color: #D6D6D6;
+    position: fixed; /* Fija el rectángulo en la parte superior de la ventana */
+    top: 100px; /* Separación de 100px desde la parte superior */
+    right: 100px; /* Separación de 20px desde el lado derecho */
+    width: 700px; /* Ancho del rectángulo gris */
+    height: 300px; /* Altura del rectángulo gris */
+    z-index: 998; /* Asegura que el rectángulo esté detrás del rectángulo naranja */
+}
+
+/* Estilos para los cuadrados de imagen */
+.cuadrados-imagenes {
+    text-align: center; /* Para centrar los cuadrados horizontalmente */
+    margin-top: 20px; /* Margen superior para separar los cuadrados del contenido superior */
+}
+
+/* Estilos para los cuadrados de imagen */
+.cuadrado-imagen {
+    width: 80px; /* Ancho del cuadrado */
+    height: 80px; /* Altura del cuadrado */
+    margin-right: 100px; /* Aumenta el margen derecho para aumentar la separación entre los cuadrados */
+    margin-bottom: 20px; /* Margen inferior para separar los cuadrados verticalmente */
+    background-color: white; /* Color de fondo del cuadrado */
+    border: 1px solid black; /* Borde del cuadrado */
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
+    margin-top: 500px;
+}
+
+.cuadrado-imagen {
+    width: 80px; /* Ancho del cuadrado */
+    height: 80px; /* Altura del cuadrado */
+    margin-right: 10px; /* Margen derecho entre los cuadrados */
+    background-color: white; /* Color de fondo del cuadrado */
+    border: 1px solid black; /* Borde del cuadrado */
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
+}
+
+.texto-amarillo {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Margen superior para separar el texto del rectángulo amarillo */
+    color: black; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente del texto */
+}
+
+.rectangulo-amarillo {
+    background-color: #DAAE64;
+    width: 1500px; /* Ancho del rectángulo amarillo */
+    height: 200px; /* Altura del rectángulo amarillo */
+    margin: 0 auto; /* Centra el rectángulo horizontalmente */
+    border-radius: 20px; /* Hace que las esquinas sean redondeadas */
+}
