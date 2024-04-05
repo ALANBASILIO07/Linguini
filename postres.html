@@ -1,11 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Postres</title>
+    <link rel="stylesheet" href="css/postres.css">
+    <style>
+        /* Estilos para los cuadrados de imagen */
+        .cuadrado-imagen {
+            display: inline-block; /* Para que los cuadrados estén en línea */
+            width: 80px; /* Ancho del cuadrado */
+            height: 80px; /* Altura del cuadrado */
+            margin-right: 10px; /* Margen derecho entre los cuadrados */
+            background-color: white; /* Color de fondo del cuadrado */
+            border: 1px solid black; /* Borde del cuadrado */
+        }
+
+        /* Estilos para las imágenes dentro de los cuadrados */
+        .cuadrado-imagen img {
+            width: 100%; /* Ajustar la imagen al 100% del ancho del cuadrado */
+            height: 100%; /* Ajustar la imagen al 100% de la altura del cuadrado */
+            object-fit: cover; /* Para cubrir todo el contenido del cuadrado */
+        }
+    </style>
+                <!--MENU HAMBURGUESA-->
+                <label class="labe_hamburguesa" for="menu_hamburguesa">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="list_icon"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                        />
+                    </svg>
+                </label>
     
+                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+    
+                <ul class="ul_links">
+                    <li class="li_links">
+                        <a href="index.html" class="link">Inicio</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="login.html" class="link">Iniciar Sesión</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="favorites.html" class="link">Mis favoritos</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="setup.html" class="link">Configuración</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="about us.html" class="link">Acerca de</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="barra-negra">
+                <img src="Pictures/Logo A la Linguini - Dark.png" alt="Logo">
+                <div class="iconos-derecha">
+                    <img src="Pictures/Buscar.png" alt="Buscar">
+                    <div class="separador"></div> <!-- Div para separación visual -->
+                    <img src="Pictures/Menu.png" alt="Menú">
+                </div>
+                <!-- Puedes agregar más imágenes aquí según sea necesario -->
+            </div>
+</head>
+
+<body>
+    <section>
+        <h1>
+            POSTRES
+        </h1>
+        
+        <div class="texto-bajo-rectangulo">TOP 10 RECETAS</div> <!-- Texto abajo del rectángulo naranja -->
+        
+        <!-- Cuadrados para imágenes -->
+        <div class="cuadrados-imagenes">
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+            <div class="cuadrado-imagen"><img src="#" alt="Imagen"></div>
+        </div>
+        <div class="texto-amarillo">Todas las recetas</div> <!--Texto arriba del rectángulo amarillo-->
+        
+        <div class="rectangulo-amarillo"></div> <!-- Rectángulo amarillo -->
+    </section>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Inicio</a></li>
+                    <li><a href="about us.html">Acerca de</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Diseñado por <span class="designer">A la Linguini</span></p>
+        </div>
+    </footer>
 </body>
 </html>
