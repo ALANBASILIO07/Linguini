@@ -1,64 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF - 8">
-        <meta name="vista" content="wight = devic-weight, initial-escale = 1.0">
-        <title> Iniciar Sesion</title>
-        <style>
-            body
-            {
-                font-family: Impact, Impact, Haettenschweiler, 'Arial Narrow Bold';
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                background-color: rgba(255, 255, 255, 0.545);
-            }
-            form
-            {
-                background-color: rgb(225, 225, 225);
-                padding: 20px;
-                border-radius: 5px;
-                box-shadow: 0px,0px,10px,rgba(0, 0, 0, 0.1);
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres</title>
+    <link rel="stylesheet" href="C:/Users/Usuario/Downloads/logc.css">
+    <title>Iniciar Sesión</title>
+    <style>
+       /* Estilos generales */
+       body {
+            margin: 0;
+            padding: 0;
+        }
 
-            input[type = "text"], input[type = "password"]
-            {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #f5f5f5f6;
-                border-radius: 3px;
-                box-sizing: border-box;
-            }
+        /* Contenedor principal */
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-            input[type = "submit"]
-            {
-                width: 100%;
-                padding: 10px;
-                background-color: rgba(255, 255, 255, 0);
-                color: rgb(255, 255, 255);
-                border: none;
-                border-radius: 3px;
-                cursor: pointer;
-                transition: background-color 0.03s ease;
-            }
+        /* Header */
+        #Header {
+            width: 100%;
+            height: 70px;
+            background: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
-            input[typr = "submit"]:hover
-            {
-                background-color: rgb(246, 149, 4);
-            }
-        </style>
-    </head>
+        /* Logo */
+        #Logo {
+            width: 70px;
+            height: 70px;
+            background: url(Imagen1.png) center/cover;
+        }
 
-    <body>
+        /* Buscar */
+        #Buscar {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Icono de búsqueda */
+        #Vector {
+            width: 40px;
+            height: 40px;
+            background: #FFFFFF;
+            border-radius: 20px;
+        }
+
+        /* Formulario */
+        form {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #F4E7D3;
+            border-radius: 22px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Inputs */
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        /* Botón de inicio de sesión */
+        input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            background-color: #848383;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 22px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #6E6D6D;
+        }
+
+        /* Enlace de olvidar contraseña */
+        #forgotPassword {
+            text-decoration: underline;
+            color: #0066FF;
+            font-size: 15px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Títulos */
+        h1, h2 {
+            font-family: 'Merienda', cursive;
+            font-weight: 400;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+    </style>
+    <style>
+        /* Estilos para los cuadrados de imagen */
+        .cuadrado-imagen {
+            display: inline-block; /* Para que los cuadrados estén en línea */
+            width: 80px; /* Ancho del cuadrado */
+            height: 80px; /* Altura del cuadrado */
+            margin-right: 10px; /* Margen derecho entre los cuadrados */
+            background-color: white; /* Color de fondo del cuadrado */
+            border: 1px solid black; /* Borde del cuadrado */
+        }
+
+        /* Estilos para las imágenes dentro de los cuadrados */
+        .cuadrado-imagen img {
+            width: 100%; /* Ajustar la imagen al 100% del ancho del cuadrado */
+            height: 100%; /* Ajustar la imagen al 100% de la altura del cuadrado */
+            object-fit: cover; /* Para cubrir todo el contenido del cuadrado */
+        }
+    </style>
+                <!--MENU HAMBURGUESA-->
+                <label class="labe_hamburguesa" for="menu_hamburguesa">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="35"
+                        fill="currentColor"
+                        class="list_icon"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                        />
+                    </svg>
+                </label>
+    
+                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+    
+                <ul class="ul_links">
+                    <li class="li_links">
+                        <a href="index.html" class="link">Inicio</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="login.html" class="link">Iniciar Sesión</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="favorites.html" class="link">Mis favoritos</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="setup.html" class="link">Configuración</a>
+                    </li>
+                    <li class="li_links">
+                        <a href="about us.html" class="link">Acerca de</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="barra-negra">
+                <img src="Pictures/Logo A la Linguini - Dark.png" alt="Logo">
+                <div class="iconos-derecha">
+                    <img src="Pictures/Buscar.png" alt="Buscar">
+                    <div class="separador"></div> <!-- Div para separación visual -->
+                    <img src="Pictures/Menu.png" alt="Menú">
+                </div>
+                <!-- Puedes agregar más imágenes aquí según sea necesario -->
+            </div>
+</head>
+<body>
+    <div id="container">
+        <div id="Header">
+            <div id="Logo"></div>
+            <div id="Buscar">
+                <div id="Vector"></div>
+            </div>
+        </div>
         <form>
-            <h2>Inicie Sesion</h2>
-            <input type="text" name = "usuario" placeholder="USUARIO" required>
-            <input type="text" name="contraseña" placeholder="CONTRASENIA" required>
-            <input type="submit" value="Iniciar">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" name="usuario" placeholder="Usuario o correo" required>
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar Sesión">
+            <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a>
         </form>
-    </body>
+        <h1>Iniciar Sesión</h1>
+        <h1>Registrarse</h1>
+    </div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.html">Inicio</a></li>
+                    <li><a href="about us.html">Acerca de</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Diseñado por <span class="designer">A la Linguini</span></p>
+        </div>
+    </footer>
+</body>
 </html>
