@@ -7,17 +7,20 @@
     --padding_left_right: 2rem;
     --ancho_maximo: 1200px;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* CONFIGURACIÓN LOGO */
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
-.logo img{
+
+.logo img {
     width: 200px;
     margin-left: 30px;
     margin-right: 30px;
@@ -34,22 +37,24 @@
 }
 
 /* CONFIGURACIÓN CUERPO */
-body{
+body {
     background-color: #fff;
     font-family: sans-serif;
 }
 
 /* CONFIGURACIÓN LINKS ETIQUETA "a" */
-a{
+a {
     text-decoration: none;
 }
 
 
 /* CONFIGURACIÓN BARRA DE NAVEGACIÓN */
-ol,ul{
+ol,
+ul {
     list-style: none;
 }
-.navbar{
+
+.navbar {
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -58,26 +63,31 @@ ol,ul{
     padding-left: 20px;
     padding-right: 20px;
 }
-.nav a{
+
+.nav a {
     font-weight: 600;
 }
-nav a:hover{
+
+nav a:hover {
     color: #6c6c6b;
 }
 
 /* CONFIGURACIÓN MENU HAMBURGUESA */
-.menu_hamburguesa{
+.menu_hamburguesa {
     display: none;
 }
-.menu_hamburguesa:checked + .ul_links {
+
+.menu_hamburguesa:checked+.ul_links {
     padding: 20px;
     height: auto;
 }
+
 .list_icon {
     color: var(--color_blanco);
     cursor: pointer;
     position: var(--padding_right);
 }
+
 .ul_links {
     width: 30%;
     background-color: var(--color_primario_suave);
@@ -93,46 +103,54 @@ nav a:hover{
     gap: 2rem;
     transition: all .3s;
 }
+
 .link {
     font-size: auto;
     color: var(--color_blanco);
     font-weight: bold;
 }
 
-@media (min-width: 100%){
+@media (min-width: 100%) {
     .labe_hamburguesa {
         display: none;
     }
-    .labe.busqueda{
+
+    .labe.busqueda {
         display: none;
     }
-    .ul_links{
+
+    .ul_links {
         position: static;
         width: auto;
         height: auto;
         flex-direction: row;
         gap: 2rem;
     }
-    .link{
+
+    .link {
         font-size: 1.2rem;
         transition: all .3s;
         padding: .2rem .7rem;
     }
 }
+
 /*GENERAL SECCIONES*/
-section{
+section {
     margin: 10px;
 }
+
 /*BUSQUEDA*/
-.busqueda{
+.busqueda {
     display: none;
 }
-.bi-search{
+
+.bi-search {
     color: var(--color_blanco);
     cursor: pointer;
 }
+
 /*SECCION CATEGORÍAS*/
-.seccion1{
+.seccion1 {
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -141,93 +159,141 @@ section{
     flex-wrap: wrap;
     margin: 10px;
 }
-.categorias{
+
+.categorias {
     display: flex;
     background-color: var(--color_blanco);
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
 }
-.logodesayunos img{
+
+.logodesayunos img {
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.logoplatof img{
+
+.logoplatof img {
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.logosaludable img{
+
+.logosaludable img {
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.logopostres img{
+
+.logopostres img {
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
-.logosnacks img{
+
+.logosnacks img {
     height: 70px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
 /*SECCION CUERPO*/
-.seccion2{
+.seccion2 {
     width: 70%;
     align-items: center;
     justify-content: space-between;
     display: flex;
 }
-.tops{
+
+.tops {
     align-items: center;
     justify-content: space-between;
     display: flex;
 }
+
+.recientes {
+    width: calc(100% - 10px);
+    /* Ancho del frame */
+    max-width: 800px;
+    /* Ancho máximo del frame */
+    margin-inline: 10px auto;
+    /* Centrar el frame */
+    background: #cc5a0e;
+    /* Color de fondo */
+    border-radius: 10px;
+    /* Radio de borde */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+.favoritas {
+    width: calc(100% - 40px);
+    /* Ancho del frame */
+    max-width: 800px;
+    /* Ancho máximo del frame */
+    margin-inline: 10px auto;
+    /* Centrar el frame */
+    background: #cc5a0e;
+    /* Color de fondo */
+    border-radius: 10px;
+    /* Radio de borde */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
 /*FOOTER*/
-footer{
+footer {
     background-color: #111;
 }
-.footerContainer{
+
+.footerContainer {
     width: 100%;
     padding: 30px 30px;
 }
-.socialIcons{
+
+.socialIcons {
     display: flex;
     justify-content: center;
 }
-.socialIcons a{
+
+.socialIcons a {
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: white;
     margin: 10px;
     border-radius: 50%;
 }
-.socialIcons a i{
+
+.socialIcons a i {
     font-size: 2em;
     color: black;
-    opacity: 0,9;
+    opacity: 0, 9;
 }
+
 /* EFECTO HOVER EN REDES SOCIALES */
-.socialIcons a:hover{
+.socialIcons a:hover {
     background-color: #111;
     transition: 0.5s;
 }
-.socialIcons a:hover i{
+
+.socialIcons a:hover i {
     color: white;
     transition: 0.5s;
 }
-.footerNav{
+
+.footerNav {
     margin: 30px 0;
 }
-.footerNav ul{
+
+.footerNav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
 }
-.footerNav ul li a{
-    color:white;
+
+.footerNav ul li a {
+    color: white;
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
@@ -235,34 +301,41 @@ footer{
     transition: 0.5s;
 
 }
-.footerNav ul li a:hover{
+
+.footerNav ul li a:hover {
     opacity: 1;
 }
-.footerBottom{
+
+.footerBottom {
     background-color: #000;
     padding: 20px;
     text-align: center;
 }
-.footerBottom p{
+
+.footerBottom p {
     color: white;
 }
-.designer{
+
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
 }
-@media (max-width: 700px){
-    .footerNav ul{
+
+@media (max-width: 700px) {
+    .footerNav ul {
         flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
+    }
+
+    .footerNav ul li {
+        width: 100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
