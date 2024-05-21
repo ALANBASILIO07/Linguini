@@ -1,207 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postres</title>
-    <link rel="stylesheet" href="C:/Users/Usuario/Downloads/logc.css">
-    <title>Iniciar Sesión</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>A la Linguini</title>
     <style>
-       /* Estilos generales */
-       body {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Contenedor principal */
-        #container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-color: #FFFFFF;
+        /* Iniciar Sesion */
+        .login-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            background: #FFFFFF;
+            padding: 20px;
         }
 
-        /* Header */
-        #Header {
+        /* Frame 31 */
+        .frame-31 {
+            width: 80%;
+            max-width: 1288px;
+            background: #FFFFFF;
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 22px;
+        }
+
+        /* Frame 25 */
+        .frame-25 {
             width: 100%;
-            height: 70px;
-            background: #000000;
+            max-width: 600px;
+            background: #F4E7D3;
+            border-radius: 22px;
+            padding: 40px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+
+        /* Frame 27 & Frame 29 */
+        .input-container {
+            margin-bottom: 30px;
+        }
+
+        .input-field {
+            width: 100%;
+            height: 66px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 11px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            font-family: 'Merienda', cursive;
+            font-size: 20px;
+            line-height: 29px;
+            color: #000000;
+        }
+
+        /* Frame 34 */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            width: 322px;
+            height: 57px;
+            background: #848383;
+            border-radius: 22px;
+            font-family: 'Merienda', cursive;
+            font-size: 20px;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            text-align: center;
+            text-decoration: underline;
+            color: #0066FF;
+            font-family: 'Merienda', cursive;
+            font-size: 15px;
+        }
+
+        /* Header Frame */
+        .header-frame {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            width: 100%;
+            max-width: 1214px;
+            background: #F4E7D3;
+            padding: 20px;
             box-sizing: border-box;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 22px;
         }
 
-        /* Logo */
-        #Logo {
-            width: 70px;
-            height: 70px;
-            background: url(Imagen1.png) center/cover;
+        .header-frame div {
+            font-family: 'Merienda', cursive;
+            font-size: 36px;
+            line-height: 52px;
+            color: #000000;
         }
 
-        /* Buscar */
-        #Buscar {
-            width: 46px;
-            height: 46px;
+        .header-frame a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .header-frame .registrarse {
+            text-align: right;
+        }
+
+        /* General Styles */
+        body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             align-items: center;
         }
 
-        /* Icono de búsqueda */
-        #Vector {
-            width: 40px;
-            height: 40px;
-            background: #FFFFFF;
-            border-radius: 20px;
-        }
-
-        /* Formulario */
-        form {
-            width: 90%;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #F4E7D3;
-            border-radius: 22px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            box-sizing: border-box;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        /* Inputs */
-        input[type="text"], input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
-
-        /* Botón de inicio de sesión */
-        input[type="submit"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            background-color: #848383;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 22px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #6E6D6D;
-        }
-
-        /* Enlace de olvidar contraseña */
-        #forgotPassword {
-            text-decoration: underline;
-            color: #0066FF;
-            font-size: 15px;
-            margin-top: 10px;
-            display: block;
-        }
-
-        /* Títulos */
-        h1, h2 {
-            font-family: 'Merienda', cursive;
-            font-weight: 400;
-            color: #000000;
-            margin-bottom: 20px;
+        footer {
+            margin-top: auto;
         }
     </style>
-    <style>
-        /* Estilos para los cuadrados de imagen */
-        .cuadrado-imagen {
-            display: inline-block; /* Para que los cuadrados estén en línea */
-            width: 80px; /* Ancho del cuadrado */
-            height: 80px; /* Altura del cuadrado */
-            margin-right: 10px; /* Margen derecho entre los cuadrados */
-            background-color: white; /* Color de fondo del cuadrado */
-            border: 1px solid black; /* Borde del cuadrado */
-        }
-
-        /* Estilos para las imágenes dentro de los cuadrados */
-        .cuadrado-imagen img {
-            width: 100%; /* Ajustar la imagen al 100% del ancho del cuadrado */
-            height: 100%; /* Ajustar la imagen al 100% de la altura del cuadrado */
-            object-fit: cover; /* Para cubrir todo el contenido del cuadrado */
-        }
-    </style>
-                <!--MENU HAMBURGUESA-->
-                <label class="labe_hamburguesa" for="menu_hamburguesa">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="35"
-                        height="35"
-                        fill="currentColor"
-                        class="list_icon"
-                        viewBox="0 0 16 16"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                        />
-                    </svg>
-                </label>
-    
-                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
-    
-                <ul class="ul_links">
-                    <li class="li_links">
-                        <a href="index.html" class="link">Inicio</a>
-                    </li>
-                    <li class="li_links">
-                        <a href="login.html" class="link">Iniciar Sesión</a>
-                    </li>
-                    <li class="li_links">
-                        <a href="favorites.html" class="link">Mis favoritos</a>
-                    </li>
-                    <li class="li_links">
-                        <a href="setup.html" class="link">Configuración</a>
-                    </li>
-                    <li class="li_links">
-                        <a href="about us.html" class="link">Acerca de</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="barra-negra">
-                <img src="Pictures/Logo A la Linguini - Dark.png" alt="Logo">
-                <div class="iconos-derecha">
-                    <img src="Pictures/Buscar.png" alt="Buscar">
-                    <div class="separador"></div> <!-- Div para separación visual -->
-                    <img src="Pictures/Menu.png" alt="Menú">
-                </div>
-                <!-- Puedes agregar más imágenes aquí según sea necesario -->
-            </div>
 </head>
 <body>
-    <div id="container">
-        <div id="Header">
-            <div id="Logo"></div>
-            <div id="Buscar">
-                <div id="Vector"></div>
+    <header class="header">          
+        <nav class="navbar">
+            <!--BÚSQUEDA-->
+            <label class="labe_busqueda" for="busqueda">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="25" 
+                    height="25" 
+                    fill="currentColor" 
+                    class="bi-search" 
+                    viewBox="0 0 16 16"
+                >
+                    <path 
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                </svg>
+            </label>
+
+            <input class="busqueda" type="checkbox" name="" id="busqueda">
+
+            <!--MENU HAMBURGUESA-->
+            <label class="labe_hamburguesa" for="menu_hamburguesa">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="35"
+                    fill="currentColor"
+                    class="list_icon"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="index.html" class="link">Inicio</a>
+                </li>
+                <li class="li_links">
+                    <a href="login.html" class="link">Iniciar Sesión</a>
+                </li>
+                <li class="li_links">
+                    <a href="favorites.html" class="link">Mis favoritos</a>
+                </li>
+                <li class="li_links">
+                    <a href="setup.html" class="link">Configuración</a>
+                </li>
+                <li class="li_links">
+                    <a href="about us.html" class="link">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <div class="header-frame">
+                <div>Iniciar Sesión</div>
+                <div class="registrarse"><a href="singup.html">Registrarse</a></div>
+            </div>
+            <div class="frame-31">
+                <div class="frame-25">
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Ingresa tu nombre de usuario o correo" />
+                    </div>
+                    <div class="input-container">
+                        <input type="password" class="input-field" placeholder="Ingresa tu contraseña" />
+                    </div>
+                    <div class="button-container">
+                        <button>Iniciar Sesión</button>
+                    </div>
+                    <div class="forgot-password">¿Olvidaste tu contraseña?</div>
+                </div>
             </div>
         </div>
-        <form>
-            <h2>Iniciar Sesión</h2>
-            <input type="text" name="usuario" placeholder="Usuario o correo" required>
-            <input type="password" name="contraseña" placeholder="Contraseña" required>
-            <input type="submit" value="Iniciar Sesión">
-            <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a>
-        </form>
-        <h1>Iniciar Sesión</h1>
-        <h1>Registrarse</h1>
-    </div>
+    </main>
+
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -211,11 +230,11 @@
                 <a href=""><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="footerNav">
-                <ul><li><a href="index.html">Inicio</a></li>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="about us.html">Acerca de</a></li>
                 </ul>
             </div>
-            
         </div>
         <div class="footerBottom">
             <p>Copyright &copy;2024; Diseñado por <span class="designer">A la Linguini</span></p>
