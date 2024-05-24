@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Dashboard Design #2 | AsmrProg</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="logo">
+            <i class='bx bx-bowl-hot'></i>
+            <div class="logo-name"><span>A la </span>Linguini</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="#" data-section="inicio"><i class='bx bxs-dashboard'></i>A la Linguini</a></li>
+            <li><a href="#" data-section="ingredientes"><i class='bx bx-lemon'></i>Ingredientes</a></li>
+            <li class="active"><a href="#" data-section="recetas"><i class='bx bx-receipt'></i>Recetas</a></li>
+            <li><a href="#" data-section="reportes"><i class='bx bx-message-square-dots'></i>Reportes</a></li>
+            <li><a href="#" data-section="usuarios"><i class='bx bx-group'></i>Usuarios</a></li>
+            <li><a href="#" data-section="configuracion"><i class='bx bx-cog'></i>Configuración</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/Logo A la Linguini.png">
+            </a>
+        </nav>
+        <!-- End of Navbar -->
+
+        <!-- Secciones -->
+        <main id="inicio" class="section active">
+            <div class="header">
+                <div class="left">
+                    <h1>A la Linguini</h1>
+                </div>
+            </div>
+            <!-- Contenido de la sección Inicio -->
+            <!-- Insights -->
+            <ul class="insights">
+                <li>
+                    <i class='bx bx-receipt'></i>
+                    <span class="info">
+                        <h3>
+                            0001
+                        </h3>
+                        <p>Recetas</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-lemon'></i>
+                    <span class="info">
+                        <h3>
+                            0001
+                        </h3>
+                        <p>Ingredientes</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-user'></i>
+                    <span class="info">
+                        <h3>
+                            0001
+                        </h3>
+                        <p>Usuarios</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-line-chart'></i>
+                    <span class="info">
+                        <h3>
+                            0001
+                        </h3>
+                        <p>Reportes</p>
+                    </span>
+                </li>
+            </ul>
+            <!-- End of Insights -->
+
+            <div class="bottom-data">
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Recetas Agregadas Recientemente</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Receta</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="images/Alan.png">
+                                    <p>Alan Basilio</p>
+                                </td>
+                                <td>Arroz rojo</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/Carlos.png">
+                                    <p>Carlos Adair</p>
+                                </td>
+                                <td>Pay de limon</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/Cynthia.png">
+                                    <p>Cynthia Cano</p>
+                                </td>
+                                <td>Mole verde</td>
+                                <td><span class="status process">Processing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Reminders -->
+                <div class="reminders">
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Tareas Pendientes</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <ul class="task-list">
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Gestionar Usuarios</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Agregar Ingredientes</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="not-completed">
+                            <div class="task-title">
+                                <i class='bx bx-x-circle'></i>
+                                <p>Revisar reportes</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- End of Reminders-->
+
+            </div>
+        </main>
+
+        <main id="ingredientes" class="section">
+            <!-- Ingredientes Section -->
+            <main class="ingredientes-section">
+            <div class="header">
+                <div class="left">
+                    <h1>Ingredientes</h1>
+                    <button id="add-ingredient-btn" class="btn">Agregar Ingrediente</button>
+                </div>
+            </div>
+
+            <div class="bottom-data">
+                <div class="ingredients">
+                    <div class="header">
+                        <i class='bx bx-lemon'></i>
+                        <h3>Ingredientes</h3>
+                    </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ingrediente</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Tomate</td>
+                        <td>2 kg</td>
+                        <td>
+                            <button class="btn modify-btn">Modificar</button>
+                            <button class="btn delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Cebolla</td>
+                        <td>1 kg</td>
+                        <td>
+                            <button class="btn modify-btn">Modificar</button>
+                            <button class="btn delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Ajo</td>
+                        <td>0.5 kg</td>
+                        <td>
+                            <button class="btn modify-btn">Modificar</button>
+                            <button class="btn delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Pimiento</td>
+                        <td>1.5 kg</td>
+                        <td>
+                            <button class="btn modify-btn">Modificar</button>
+                            <button class="btn delete-btn">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Albahaca</td>
+                        <td>100 g</td>
+                        <td>
+                                    <button class="btn modify-btn">Modificar</button>
+                                    <button class="btn delete-btn">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </main>
+        </main>
+
+        <main id="recetas" class="section">
+            <!-- Contenido de la sección Recetas -->
+                <div class="header">
+                    <div class="left">
+                        <h1>Recetas</h1>
+                    </div>
+                </div>
+            
+                <!-- Tabla de Recetas -->
+                <div class="recetas">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Nombre de la Receta</th>
+                                <th>Fecha de Añadido</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alan Basilio</td>
+                                <td>Arroz Rojo</td>
+                                <td>23/05/2024</td>
+                                <td><button class="editar">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Adair</td>
+                                <td>Pay de Limón</td>
+                                <td>22/05/2024</td>
+                                <td><button class="editar">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Cynthia Cano</td>
+                                <td>Mole Verde</td>
+                                <td>21/05/2024</td>
+                                <td><button class="editar">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Diana López</td>
+                                <td>Pasta Alfredo</td>
+                                <td>20/05/2024</td>
+                                <td><button class="editar">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Eduardo Martínez</td>
+                                <td>Sopa de Tortilla</td>
+                                <td>19/05/2024</td>
+                                <td><button class="editar">Editar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Previsualización de Receta -->
+                <div class="previsualizacion">
+                    <h2>Previsualización de Receta</h2>
+                    <div class="contenido">
+                        <p>Usuario: <span id="usuario"></span></p>
+                        <p>Nombre de la Receta: <span id="nombre-receta"></span></p>
+                        <p>Fecha de Añadido: <span id="fecha-anadido"></span></p>
+                        <button class="editar">Editar</button>
+                    </div>
+                </div>
+        </main>
+
+        <main id="reportes" class="section">
+            <!-- Contenido de la sección Reportes -->
+                <div class="header">
+                    <div class="left">
+                        <h1>Reportes</h1>
+                    </div>
+                </div>
+            
+                <!-- Tabla de Reportes -->
+                <div class="reportes">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Motivo</th>
+                                <th>Comentario</th>
+                                <th>Autor</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fallo en la carga de la página</td>
+                                <td>La página no carga correctamente en el navegador Firefox.</td>
+                                <td>Usuario1</td>
+                                <td>Pendiente</td>
+                                <td><button class="revisar">Revisar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Error en la función de búsqueda</td>
+                                <td>La búsqueda no devuelve resultados precisos.</td>
+                                <td>Usuario2</td>
+                                <td>Pendiente</td>
+                                <td><button class="revisar">Revisar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Enlace roto en el footer</td>
+                                <td>El enlace "Contáctanos" en el footer no funciona.</td>
+                                <td>Usuario3</td>
+                                <td>Revisado</td>
+                                <td><button class="revisar">Revisar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Problemas de visualización en móviles</td>
+                                <td>La página no se muestra correctamente en dispositivos móviles.</td>
+                                <td>Usuario4</td>
+                                <td>Pendiente</td>
+                                <td><button class="revisar">Revisar</button></td>
+                            </tr>
+                            <tr>
+                                <td>Error de gramática en la página de inicio</td>
+                                <td>Hay errores gramaticales en el texto de la página de inicio.</td>
+                                <td>Usuario5</td>
+                                <td>Revisado</td>
+                                <td><button class="revisar">Revisar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Detalles del Reporte -->
+                <div class="detalles-reporte">
+                    <h2>Detalles del Reporte</h2>
+                    <div class="contenido">
+                        <p>Motivo: <span id="motivo"></span></p>
+                        <p>Comentario: <span id="comentario"></span></p>
+                        <p>Autor: <span id="autor"></span></p>
+                        <textarea id="resolucion" placeholder="Agregar resolución"></textarea>
+                        <button class="agregar-resolucion">Agregar Resolución</button>
+                    </div>
+                </div>                     
+        </main>
+
+        <main id="usuarios" class="section">
+            <!-- Contenido de la sección Usuarios -->
+                <div class="header">
+                    <div class="left">
+                        <h1>Usuarios</h1>
+                    </div>
+                </div>
+            
+                <!-- Lista de Usuarios -->
+                <div class="usuarios">
+                    <div class="usuario">
+                        <img src="images/Alan.png" alt="Usuario 1">
+                        <div class="info">
+                            <h3>Usuario 1</h3>
+                            <p>Fecha de añadido: 2024-05-20</p>
+                            <p>Número de recetas: 3</p>
+                        </div>
+                    </div>
+                    <div class="usuario">
+                        <img src="images/Carlos.png" alt="Usuario 2">
+                        <div class="info">
+                            <h3>Usuario 2</h3>
+                            <p>Fecha de añadido: 2024-05-21</p>
+                            <p>Número de recetas: 1</p>
+                        </div>
+                    </div>
+                    <div class="usuario">
+                        <img src="images/Cynthia.png" alt="Usuario 3">
+                        <div class="info">
+                            <h3>Usuario 3</h3>
+                            <p>Fecha de añadido: 2024-05-22</p>
+                            <p>Número de recetas: 2</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Acciones de Usuario -->
+                <div class="acciones-usuario">
+                    <button class="alta-usuario">Dar de Alta Usuario</button>
+                    <button class="modificar-usuario">Modificar Usuario</button>
+                    <button class="eliminar-usuario">Eliminar Usuario</button>
+                </div>
+        </main>
+
+        <main id="configuracion" class="section">
+            <!-- Contenido de la sección Configuración -->
+                <div class="header">
+                    <div class="left">
+                        <h1>Configuración</h1>
+                    </div>
+                </div>
+            
+                <!-- Cambio de Gama de Colores -->
+                <div class="cambio-color">
+                    <h2>Cambio de Gama de Colores</h2>
+                    <div class="select-color">
+                        <label for="color-picker">Selecciona un color:</label>
+                        <input type="color" id="color-picker" name="color-picker">
+                    </div>
+                </div>
+            
+                <!-- Cambio de Datos del Administrador -->
+                <div class="cambio-datos">
+                    <h2>Cambio de Datos del Administrador</h2>
+                    <div class="editar-nombre">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" value="Admin">
+                        <button class="editar-btn"><i class="bx bx-edit"></i></button>
+                    </div>
+                    <div class="editar-contraseña">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" id="contraseña" name="contraseña" value="********">
+                        <button class="editar-btn"><i class="bx bx-edit"></i></button>
+                    </div>
+                    <div class="editar-foto">
+                        <label for="foto">Foto de Perfil:</label>
+                        <input type="file" id="foto" name="foto" accept="image/*">
+                        <button class="editar-btn"><i class="bx bx-edit"></i></button>
+                    </div>
+                </div>
+        </main>
+    </div>
+    <!-- End of Main Content -->
+
+    <script src="index2.js"></script>
+</body>
+
+</html>
